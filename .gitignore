@@ -1,7 +1,20 @@
-# Ignore data and log directories
-thingsboard/data
-thingsboard/logs
+# Ignore Thingsboard data and logs
+thingsboard/data/
+thingsboard/logs/
 
-# Ignore runtime artifacts
-*.env
+# Ignore Minio data
+minio/data/
+
+# Ignore Node-RED runtime data
+node-red/data/.config.*
+
+# Ignore runtime logs
 *.log
+
+# Ignore environment files
+*.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
