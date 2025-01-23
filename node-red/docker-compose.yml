@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  node-red:
+    image: nodered/node-red:latest
+    container_name: node-red
+    restart: always
+    ports:
+      - "1881:1880"
+    volumes:
+      - ./data:/data
+    environment:
+      - NODE_RED_ENABLE_SAFE_MODE=true
+volumes:
+  node-red-data:

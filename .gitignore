@@ -1,0 +1,7 @@
+# Ignore data and log directories
+thingsboard/data
+thingsboard/logs
+
+# Ignore runtime artifacts
+*.env
+*.log
