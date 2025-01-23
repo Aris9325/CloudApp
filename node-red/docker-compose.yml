@@ -5,10 +5,32 @@ services:
     container_name: node-red
     restart: always
     ports:
-      - "1881:1880"
+      - "1881:1880"  # Node-RED web UI
     volumes:
-      - ./data:/data
+      - ./data:/data  # Persistent storage for flows and configurations
     environment:
       - NODE_RED_ENABLE_SAFE_MODE=true
+    networks:
+      - cloudapp_network
+
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    restart: always
+    ports:
+      - "1884:1884"  # MQTT port
+      - "9002:9002"  # WebSocket port
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    networks:
+      - cloudapp_network
+
 volumes:
   node-red-data:
+  mosquitto-data:
+
+networks:
+  cloudapp_network:
+    external: true
