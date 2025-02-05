@@ -1,0 +1,71 @@
+{
+  "application": {
+    "objectName": "TB_gateway",
+    "address": "0.0.0.0",
+    "objectIdentifier": 599,
+    "maxApduLengthAccepted": 1476,
+    "segmentationSupported": "segmentedBoth",
+    "vendorIdentifier": 15,
+    "deviceDiscoveryTimeoutInSec": 5
+  },
+  "devices": [
+    {
+      "deviceInfo": {
+        "deviceNameExpressionSource": "expression",
+        "deviceNameExpression": "BACnet Device ${objectName}",
+        "deviceProfileExpressionSource": "constant",
+        "deviceProfileExpression": "default"
+      },
+      "address": "192.168.1.160:49644",
+      "pollPeriod": 10000,
+      "attributes": [
+        {
+          "key": "temperature",
+          "objectType": "analogInput",
+          "objectId": "0",
+          "propertyId": "presentValue"
+        }
+      ],
+      "timeseries": [
+        {
+          "key": "water_temp",
+          "objectType": "analogInput",
+          "objectId": "1",
+          "propertyId": "presentValue"
+        },
+        {
+          "key": "temp_outdoor",
+          "objectType": "analogInput",
+          "objectId": "2",
+          "propertyId": "presentValue"
+        }
+      ],
+      "attributeUpdates": [
+        {
+          "key": "brightness",
+          "objectType": "analogInput",
+          "objectId": "1",
+          "propertyId": "presentValue"
+        }
+      ],
+      "serverSideRpc": [
+        {
+          "method": "set_state",
+          "requestType": "writeProperty",
+          "requestTimeout": 10000,
+          "objectType": "binaryOutput",
+          "objectId": "1",
+          "propertyId": "presentValue"
+        },
+        {
+          "method": "get_state",
+          "requestType": "readProperty",
+          "requestTimeout": 10000,
+          "objectType": "analogInput",
+          "objectId": "0",
+          "propertyId": "presentValue"
+        }
+      ]
+    }
+  ]
+}

@@ -6,7 +6,7 @@
                 "view-store-position": false,
                 "view-show-grid": true,
                 "view-snap-grid": true,
-                "view-grid-size": 20,
+                "view-grid-size": "20",
                 "view-node-status": true,
                 "view-node-show-label": true,
                 "view-show-tips": true,
@@ -14,7 +14,34 @@
             },
             "tours": {
                 "welcome": "4.0.8"
+            },
+            "dialog": {
+                "export": {
+                    "pretty": true,
+                    "json-view": true
+                }
             }
-        }
+        },
+        "debug": {
+            "filter": "filterSelected",
+            "filteredNodes": [
+                "6e032fd18918631e",
+                "91e78468cb51ca49",
+                "09928f4a5138ef00",
+                "d54db8f9520f4252",
+                "afd894b6d6f351f1",
+                "edc7f94642082884",
+                "ee27169e5a1e1e3e",
+                "47e237691a878e45",
+                "2cd03b50748c6290",
+                "627946fca21dc397",
+                "f1bae13260afeca8",
+                "9915241c11295150",
+                "3e4ee902f071c637",
+                "7ff050a1a13dc241"
+            ]
+        },
+        "menu-deploymenu-item-node": true,
+        "menu-deploymenu-item-full": false
     }
 }

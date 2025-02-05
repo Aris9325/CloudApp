@@ -1,0 +1,1661 @@
+[
+    {
+        "id": "66abe7c97d586c12",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3f6392ec086cd164",
+        "type": "mqtt-broker",
+        "name": "Mosquitto Broker",
+        "broker": "20.77.25.140",
+        "port": "1884",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ca7b1101095de988",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "cdba318aadea0dad",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "819e41316fca282e",
+        "type": "ui_group",
+        "name": "Commands",
+        "tab": "ca7b1101095de988",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f36cc3e9e5df60ac",
+        "type": "amqp-broker",
+        "name": "RabbitMQ",
+        "host": "20.77.25.140",
+        "port": "5672",
+        "vhost": "",
+        "tls": false,
+        "credsFromSettings": false
+    },
+    {
+        "id": "e3d59bd723917b3a",
+        "type": "ui_group",
+        "name": "Input",
+        "tab": "ca7b1101095de988",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "18515a14d4b2bef2",
+        "type": "ui_group",
+        "name": "Meteo",
+        "tab": "ca7b1101095de988",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "392b9f9f45fce0b4",
+        "type": "ui_group",
+        "name": "Battery",
+        "tab": "ca7b1101095de988",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "746c7aab3db51e1b",
+        "type": "ui_group",
+        "name": "Setpoints",
+        "tab": "ca7b1101095de988",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "db83cb52c9fda68f",
+        "type": "mqtt in",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "topic": "sensor/humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3f6392ec086cd164",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 440,
+        "wires": [
+            [
+                "7ff050a1a13dc241",
+                "63157277c410ae84",
+                "dca87b46ecdae6b7",
+                "fb0e0412102062df",
+                "b3d69bd0f42bd527"
+            ]
+        ]
+    },
+    {
+        "id": "7ff050a1a13dc241",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "cdd793e0ce54fa28",
+        "type": "mqtt in",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "topic": "sensor/battery",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3f6392ec086cd164",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 680,
+        "wires": [
+            [
+                "f1bae13260afeca8",
+                "849b094a1ae86254",
+                "b1dc791f508b0ee8",
+                "a7b7ee1e1bd6df59",
+                "7bbe7ccd33fb2db3"
+            ]
+        ]
+    },
+    {
+        "id": "f1bae13260afeca8",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "bc99dc88ccf763a8",
+        "type": "mqtt in",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "topic": "input/input1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3f6392ec086cd164",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 840,
+        "wires": [
+            [
+                "1df36a8ab7b03843",
+                "dd6fac0cc815bf28"
+            ]
+        ]
+    },
+    {
+        "id": "1b8adc16f5bd99b0",
+        "type": "mqtt in",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "topic": "input/input2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3f6392ec086cd164",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 940,
+        "wires": [
+            [
+                "ea965322cc02c77c",
+                "db896c1492a752dc"
+            ]
+        ]
+    },
+    {
+        "id": "3ecc0f3ea09f0ec5",
+        "type": "mqtt in",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "topic": "input/input3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3f6392ec086cd164",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 1040,
+        "wires": [
+            [
+                "8cbf497759395140",
+                "b09d96faa1adfad9"
+            ]
+        ]
+    },
+    {
+        "id": "ed5b9a19f8585bb4",
+        "type": "mqtt in",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "topic": "input/input4",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3f6392ec086cd164",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 1160,
+        "wires": [
+            [
+                "49e8d102d539dc05",
+                "391b1a75642e1e09"
+            ]
+        ]
+    },
+    {
+        "id": "d54db8f9520f4252",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "afd894b6d6f351f1",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "edc7f94642082884",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "63157277c410ae84",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "function 2",
+        "func": "// Retrieve or initialize global context for humidity data\nlet contextData = global.get('humidityData') || { count: 0, sum: 0 };\n\n// Determine the humidity from the incoming payload\nlet humidity;\n\nif (typeof msg.payload === \"number\") {\n    // If the payload is a plain number, use it directly\n    humidity = msg.payload;\n} else if (typeof msg.payload === \"object\" && msg.payload.humidity !== undefined) {\n    // If the payload is a JSON object with a \"humidity\" field, extract it\n    humidity = parseFloat(msg.payload.humidity);\n} else {\n    // If the payload is invalid, log an error and stop processing\n    node.error(\"Invalid payload format: \" + JSON.stringify(msg.payload));\n    return null;\n}\n\n// Ensure the humidity is a valid number\nif (isNaN(humidity)) {\n    node.error(\"Invalid humidity value: \" + msg.payload);\n    return null;\n}\n\n// Accumulate the humidity\ncontextData.sum += humidity;\ncontextData.count += 1;\n\n// Check if 10 messages have been received\nif (contextData.count === 10) {\n    let average = contextData.sum / contextData.count; // Calculate the average\n\n    // Limit the average to 2 decimal places\n    average = Number(average.toFixed(2));\n\n    // Reset the context for the next batch\n    contextData.count = 0;\n    contextData.sum = 0;\n\n    // Save the reset context\n    global.set('humidityData', contextData);\n\n    // Send the average as output\n    msg.payload = { average_humidity: average };\n    return msg; // Send the message downstream\n}\n\n// Save the updated context for future messages\nglobal.set('humidityData', contextData);\nreturn null; // Do nothing until 10 messages are received\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 440,
+        "wires": [
+            [
+                "3e4ee902f071c637",
+                "15408ff0b1ee287e"
+            ]
+        ]
+    },
+    {
+        "id": "3e4ee902f071c637",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "15408ff0b1ee287e",
+        "type": "http request",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://20.77.25.140:8080/api/v1/34l9Go46ian5DgBsENsn/telemetry",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 970,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "849b094a1ae86254",
+        "type": "amqp-out",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "broker": "f36cc3e9e5df60ac",
+        "exchangeName": "sensor/battery",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "sensor/battery",
+        "exchangeRoutingKeyType": "str",
+        "exchangeDurable": true,
+        "amqpProperties": "{ \"headers\": {} }",
+        "rpcTimeoutMilliseconds": 3000,
+        "outputs": 0,
+        "x": 390,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "dca87b46ecdae6b7",
+        "type": "amqp-out",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "broker": "f36cc3e9e5df60ac",
+        "exchangeName": "sensor/humidity",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "sensor/humidity",
+        "exchangeRoutingKeyType": "str",
+        "exchangeDurable": true,
+        "amqpProperties": "{ \"headers\": {} }",
+        "rpcTimeoutMilliseconds": 3000,
+        "outputs": 0,
+        "x": 800,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "99e6d479ea8382fe",
+        "type": "http request",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://20.77.25.140:8080/api/v1/yPSUrWuucd0rCJgH7szD/telemetry",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 970,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1dc791f508b0ee8",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "function 3",
+        "func": "// Retrieve or initialize global context for battery data\nlet contextData = global.get('batteryData') || { count: 0, sum: 0 };\n\n// Determine the battery level from the incoming payload\nlet battery;\n\nif (typeof msg.payload === \"number\") {\n    // If the payload is a plain number, use it directly\n    battery = msg.payload;\n} else if (typeof msg.payload === \"object\" && msg.payload.battery !== undefined) {\n    // If the payload is a JSON object with a \"battery\" field, extract it\n    battery = parseFloat(msg.payload.battery);\n} else {\n    // If the payload is invalid, log an error and stop processing\n    node.error(\"Invalid payload format: \" + JSON.stringify(msg.payload));\n    return null;\n}\n\n// Ensure the battery level is a valid number\nif (isNaN(battery)) {\n    node.error(\"Invalid battery value: \" + msg.payload);\n    return null;\n}\n\n// Accumulate the battery level\ncontextData.sum += battery;\ncontextData.count += 1;\n\n// Check if 10 messages have been received\nif (contextData.count === 10) {\n    let average = contextData.sum / contextData.count; // Calculate the average\n\n    // Limit the average to 2 decimal places\n    average = Number(average.toFixed(2));\n\n    // Reset the context for the next batch\n    contextData.count = 0;\n    contextData.sum = 0;\n\n    // Save the reset context\n    global.set('batteryData', contextData);\n\n    // Send the average as output\n    msg.payload = { average_battery: average };\n    return msg; // Send the message downstream\n}\n\n// Save the updated context for future messages\nglobal.set('batteryData', contextData);\nreturn null; // Do nothing until 10 messages are received\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 680,
+        "wires": [
+            [
+                "99e6d479ea8382fe",
+                "9915241c11295150"
+            ]
+        ]
+    },
+    {
+        "id": "786b7191cc822fe6",
+        "type": "http request",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://20.77.25.140:8080/api/v1/zVHQjdiYuHFgOxjDyFDb/telemetry",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1df36a8ab7b03843",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "function 4",
+        "func": "// Parse the incoming message (assuming it's a number or JSON string)\nvar input1 = parseFloat(msg.payload) || JSON.parse(msg.payload).humidity;\n\n// Convert input to true/false (1 => true, 0 => false)\nvar DigitalInput1 = (input1 === 1);\n\n// Prepare the payload for ThingsBoard\nmsg.payload = {\n    DigitalInput1: DigitalInput1\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 840,
+        "wires": [
+            [
+                "786b7191cc822fe6",
+                "47e237691a878e45"
+            ]
+        ]
+    },
+    {
+        "id": "47e237691a878e45",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "11d08bab26d75454",
+        "type": "http request",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://20.77.25.140:8080/api/v1/FUxeN0xyE7T04G6NJOX7/telemetry",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e7c01805eda2190",
+        "type": "http request",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://20.77.25.140:8080/api/v1/I2BmZFGe6is1LPCNmok8/telemetry",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d326a628b078f7c",
+        "type": "http request",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://20.77.25.140:8080/api/v1/vfNfDj6yzT5MqqGwS4v8/telemetry",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea965322cc02c77c",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "function 5",
+        "func": "// Parse the incoming message (assuming it's a number or JSON string)\nvar input2 = parseFloat(msg.payload) || JSON.parse(msg.payload).humidity;\n\n// Convert input to true/false (1 => true, 0 => false)\nvar DigitalInput2 = (input2 === 1);\n\n// Prepare the payload for ThingsBoard\nmsg.payload = {\n    DigitalInput2: DigitalInput2\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 940,
+        "wires": [
+            [
+                "d54db8f9520f4252",
+                "11d08bab26d75454"
+            ]
+        ]
+    },
+    {
+        "id": "8cbf497759395140",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "function 6",
+        "func": "// Parse the incoming message (assuming it's a number or JSON string)\nvar input3 = parseFloat(msg.payload) || JSON.parse(msg.payload).humidity;\n\n// Convert input to true/false (1 => true, 0 => false)\nvar DigitalInput3 = (input3 === 1);\n\n// Prepare the payload for ThingsBoard\nmsg.payload = {\n    DigitalInput3: DigitalInput3\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 1040,
+        "wires": [
+            [
+                "afd894b6d6f351f1",
+                "9e7c01805eda2190"
+            ]
+        ]
+    },
+    {
+        "id": "49e8d102d539dc05",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "function 7",
+        "func": "// Parse the incoming message (assuming it's a number or JSON string)\nvar input4 = parseFloat(msg.payload) || JSON.parse(msg.payload).humidity;\n\n// Convert input to true/false (1 => true, 0 => false)\nvar DigitalInput4 = (input4 === 1);\n\n// Prepare the payload for ThingsBoard\nmsg.payload = {\n    DigitalInput4: DigitalInput4\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 1160,
+        "wires": [
+            [
+                "edc7f94642082884",
+                "9d326a628b078f7c"
+            ]
+        ]
+    },
+    {
+        "id": "9915241c11295150",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "e846e3f642689576",
+        "type": "mqtt out",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "topic": "command/output1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3f6392ec086cd164",
+        "x": 1230,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "ee27169e5a1e1e3e",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "a1ac0fee23e02ae8",
+        "type": "mqtt out",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "topic": "command/output2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3f6392ec086cd164",
+        "x": 1230,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "5321b9792f02f520",
+        "type": "mqtt out",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "topic": "command/output3",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3f6392ec086cd164",
+        "x": 1230,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "67fbe2e8ff599a96",
+        "type": "mqtt out",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "topic": "command/output4",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3f6392ec086cd164",
+        "x": 1230,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "af5609116d4094f1",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "function 8",
+        "func": "// Parse the incoming message payload\nvar input = msg.payload;\n\n// Check if input is \"ON\" or not\nif (input === \"ON\" || input === true) {\n    msg.payload = \"ON\"; // Set payload to ON if input is \"ON\"\n} else {\n    msg.payload = \"OFF\"; // Set payload to OFF for all other cases\n}\n\n// Return the modified message object\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 820,
+        "wires": [
+            [
+                "e846e3f642689576",
+                "ee27169e5a1e1e3e"
+            ]
+        ]
+    },
+    {
+        "id": "975dfcb2e6a50b49",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "function 9",
+        "func": "// Parse the incoming message payload\nvar input = msg.payload;\n\n// Check if input is \"ON\" or not\nif (input === \"ON\" || input === true) {\n    msg.payload = \"ON\"; // Set payload to ON if input is \"ON\"\n} else {\n    msg.payload = \"OFF\"; // Set payload to OFF for all other cases\n}\n\n// Return the modified message object\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 900,
+        "wires": [
+            [
+                "a1ac0fee23e02ae8"
+            ]
+        ]
+    },
+    {
+        "id": "064ee471f51dff03",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "function 10",
+        "func": "// Parse the incoming message payload\nvar input = msg.payload;\n\n// Check if input is \"ON\" or not\nif (input === \"ON\" || input === true) {\n    msg.payload = \"ON\"; // Set payload to ON if input is \"ON\"\n} else {\n    msg.payload = \"OFF\"; // Set payload to OFF for all other cases\n}\n\n// Return the modified message object\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 960,
+        "wires": [
+            [
+                "5321b9792f02f520"
+            ]
+        ]
+    },
+    {
+        "id": "8ed419a5b07898b3",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "function 11",
+        "func": "// Parse the incoming message payload\nvar input = msg.payload;\n\n// Check if input is \"ON\" or not\nif (input === \"ON\" || input === true) {\n    msg.payload = \"ON\"; // Set payload to ON if input is \"ON\"\n} else {\n    msg.payload = \"OFF\"; // Set payload to OFF for all other cases\n}\n\n// Return the modified message object\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 1000,
+        "wires": [
+            [
+                "67fbe2e8ff599a96"
+            ]
+        ]
+    },
+    {
+        "id": "60c91fe66d7c4792",
+        "type": "ui_switch",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "label": "Output 4",
+        "tooltip": "",
+        "group": "819e41316fca282e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 800,
+        "y": 1000,
+        "wires": [
+            [
+                "8ed419a5b07898b3"
+            ]
+        ]
+    },
+    {
+        "id": "79cc38b6031a9216",
+        "type": "ui_switch",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "label": "Output 3",
+        "tooltip": "",
+        "group": "819e41316fca282e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 800,
+        "y": 960,
+        "wires": [
+            [
+                "064ee471f51dff03"
+            ]
+        ]
+    },
+    {
+        "id": "070ab63e4ca9ee5a",
+        "type": "ui_switch",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "label": "Output 1",
+        "tooltip": "",
+        "group": "819e41316fca282e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 800,
+        "y": 820,
+        "wires": [
+            [
+                "af5609116d4094f1"
+            ]
+        ]
+    },
+    {
+        "id": "07ac57b831d2c3a4",
+        "type": "ui_switch",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "label": "Output 2",
+        "tooltip": "",
+        "group": "819e41316fca282e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 800,
+        "y": 900,
+        "wires": [
+            [
+                "975dfcb2e6a50b49"
+            ]
+        ]
+    },
+    {
+        "id": "a7b7ee1e1bd6df59",
+        "type": "ui_gauge",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "group": "392b9f9f45fce0b4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Battery Health",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#b50000",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "20",
+        "seg2": "80",
+        "diff": false,
+        "className": "",
+        "x": 340,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "fb0e0412102062df",
+        "type": "ui_gauge",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "group": "18515a14d4b2bef2",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 680,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "dd6fac0cc815bf28",
+        "type": "ui_switch",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "label": "Input 1",
+        "tooltip": "",
+        "group": "e3d59bd723917b3a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 310,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db896c1492a752dc",
+        "type": "ui_switch",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "label": "Input 2",
+        "tooltip": "",
+        "group": "e3d59bd723917b3a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 310,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b09d96faa1adfad9",
+        "type": "ui_switch",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "label": "Input 3",
+        "tooltip": "",
+        "group": "e3d59bd723917b3a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 310,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "391b1a75642e1e09",
+        "type": "ui_switch",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "label": "Input 4",
+        "tooltip": "",
+        "group": "e3d59bd723917b3a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 310,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2832d13ab07edfad",
+        "type": "e-mail",
+        "z": "66abe7c97d586c12",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "moutskas@hotmail.com",
+        "dname": "Node Red",
+        "x": 820,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "72c97da193c81bd3",
+        "type": "e-mail",
+        "z": "66abe7c97d586c12",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "moutskas@hotmail.com",
+        "dname": "Node Red",
+        "x": 840,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b3d69bd0f42bd527",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "Create Email",
+        "func": "// Retrieve previous alert status\nlet humidityAlertActive = flow.get('humidityAlertActive') || false;\n\n// Retrieve the humidity setpoint from flow context\nlet setpoint = flow.get('humiditySetpoint'); \n\nif (setpoint === undefined || setpoint === null) {\n    node.warn(\"⚠️ Humidity Setpoint not set, using default 50%.\");\n    setpoint = 50; // Default setpoint if not set\n}\n\n// Retrieve the current humidity from the MQTT input\nlet humidity;\n\nif (typeof msg.payload === \"number\") {\n    humidity = msg.payload;\n} else if (typeof msg.payload === \"object\" && msg.payload.humidity !== undefined) {\n    humidity = parseFloat(msg.payload.humidity);\n} else {\n    node.error(\"❌ Invalid payload format: \" + JSON.stringify(msg.payload));\n    return null;\n}\n\n// Ensure the humidity is a valid number\nif (isNaN(humidity)) {\n    node.error(\"❌ Invalid humidity value: \" + msg.payload);\n    return null;\n}\n\n// Debugging logs\nnode.warn(`✅ Retrieved Humidity Setpoint: ${setpoint}%`);\nnode.warn(`✅ Incoming Humidity: ${humidity}%`);\nnode.warn(`🔍 Previous Humidity Alert Status: ${humidityAlertActive}`);\n\n// Check if humidity exceeds setpoint\nif (humidity > setpoint) {\n    if (!humidityAlertActive) {\n        // Send an email **only if an alert hasn't been triggered yet**\n        msg.topic = \"🚨 Humidity Alert!\";\n        msg.payload = `⚠️ Warning! At ${new Date().toLocaleString()}, the humidity is ${humidity}%, which exceeds the setpoint of ${setpoint}%.`;\n\n        // Set alert status to prevent repeated emails\n        flow.set('humidityAlertActive', true);\n\n        node.warn(\"🚨 ALERT: Humidity exceeded setpoint for the first time. Sending email.\");\n        return msg; // Send the message downstream\n    } else {\n        node.warn(\"⏳ Humidity alert already active. No email sent.\");\n    }\n} else {\n    if (humidityAlertActive) {\n        node.warn(\"✅ Humidity dropped below setpoint. Resetting alert status.\");\n    }\n    // Reset alert status when humidity goes back below setpoint\n    flow.set('humidityAlertActive', false);\n}\n\nreturn null; // Do nothing if humidity is below the setpoint\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 300,
+        "wires": [
+            [
+                "2832d13ab07edfad"
+            ]
+        ]
+    },
+    {
+        "id": "7bbe7ccd33fb2db3",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "Create Email",
+        "func": "// Set a fixed battery threshold (Change this value as needed)\nlet threshold = 72;  // ⚠️ Change this value to set a different battery alert level\n\n// Retrieve previous alert status\nlet batteryAlertActive = flow.get('batteryAlertActive') || false;\n\n// Retrieve the current battery level from the MQTT input\nlet battery;\n\nif (typeof msg.payload === \"number\") {\n    battery = msg.payload;\n} else if (typeof msg.payload === \"object\" && msg.payload.battery !== undefined) {\n    battery = parseFloat(msg.payload.battery);\n} else {\n    node.error(\"❌ Invalid payload format: \" + JSON.stringify(msg.payload));\n    return null;\n}\n\n// Ensure the battery level is a valid number\nif (isNaN(battery)) {\n    node.error(\"❌ Invalid battery value: \" + msg.payload);\n    return null;\n}\n\n// Debugging logs\nnode.warn(`✅ Battery Threshold Set in Code: ${threshold}%`);\nnode.warn(`✅ Incoming Battery Level: ${battery}%`);\nnode.warn(`🔍 Previous Battery Alert Status: ${batteryAlertActive}`);\n\n// Check if battery is below the threshold\nif (battery < threshold) {\n    if (!batteryAlertActive) {\n        // Send an email **only if an alert hasn't been triggered yet**\n        msg.topic = \"🚨 Battery Alert!\";\n        msg.payload = `⚠️ Warning! At ${new Date().toLocaleString()}, the battery level is ${battery}%, which is below the set threshold of ${threshold}%.`;\n\n        // Set alert status to prevent repeated emails\n        flow.set('batteryAlertActive', true);\n\n        node.warn(\"🚨 ALERT: Battery level dropped below threshold for the first time. Sending email.\");\n        return msg; // Send the message downstream\n    } else {\n        node.warn(\"⏳ Battery alert already active. No email sent.\");\n    }\n} else {\n    if (batteryAlertActive) {\n        node.warn(\"✅ Battery level recovered. Resetting alert status.\");\n    }\n    // Reset alert status when battery goes back above threshold\n    flow.set('batteryAlertActive', false);\n}\n\nreturn null; // Do nothing if battery is above threshold\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 520,
+        "wires": [
+            [
+                "72c97da193c81bd3"
+            ]
+        ]
+    },
+    {
+        "id": "490bf81787c9ad28",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "Create Email",
+        "func": "// Retrieve previous alert status\nlet temperatureAlertActive = flow.get('temperatureAlertActive') || false;\n\n// Retrieve the setpoint from flow context\nlet setpoint = flow.get('temperatureSetpoint');\n\nif (setpoint === undefined || setpoint === null) {\n    node.warn(\"⚠️ Setpoint not set, using default 25°C.\");\n    setpoint = 25; // Default setpoint if not set\n}\n\n// Retrieve the current temperature from the MQTT input\nlet temperature;\n\nif (typeof msg.payload === \"number\") {\n    temperature = msg.payload;\n} else if (typeof msg.payload === \"object\" && msg.payload.temperature !== undefined) {\n    temperature = parseFloat(msg.payload.temperature);\n} else {\n    node.error(\"❌ Invalid payload format: \" + JSON.stringify(msg.payload));\n    return null;\n}\n\n// Ensure the temperature is a valid number\nif (isNaN(temperature)) {\n    node.error(\"❌ Invalid temperature value: \" + msg.payload);\n    return null;\n}\n\n// Debugging logs\nnode.warn(`✅ Retrieved Setpoint: ${setpoint}°C`);\nnode.warn(`✅ Incoming Temperature: ${temperature}°C`);\nnode.warn(`🔍 Previous Alert Status: ${temperatureAlertActive}`);\n\n// Check if temperature exceeds setpoint\nif (temperature > setpoint) {\n    if (!temperatureAlertActive) {\n        // Send an email **only if an alert hasn't been triggered yet**\n        msg.topic = \"🚨 Temperature Alert!\";\n        msg.payload = `⚠️ Warning! At ${new Date().toLocaleString()}, the temperature is ${temperature}°C, which exceeds the setpoint of ${setpoint}°C.`;\n\n        // Set alert status to prevent repeated emails\n        flow.set('temperatureAlertActive', true);\n\n        node.warn(\"🚨 ALERT: Temperature exceeded setpoint for the first time. Sending email.\");\n        return msg; // Send the message downstream\n    } else {\n        node.warn(\"⏳ Alert already active. No email sent.\");\n    }\n} else {\n    if (temperatureAlertActive) {\n        node.warn(\"✅ Temperature dropped below setpoint. Resetting alert status.\");\n    }\n    // Reset alert status when temperature goes back below setpoint\n    flow.set('temperatureAlertActive', false);\n}\n\nreturn null; // Do nothing if temperature is below the setpoint\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 100,
+        "wires": [
+            [
+                "e978e7b4ec514f2b",
+                "d896b7349b881883"
+            ]
+        ]
+    },
+    {
+        "id": "838355ea784ceb4b",
+        "type": "mqtt in",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "topic": "sensor/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3f6392ec086cd164",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "490bf81787c9ad28",
+                "bb1fb155903fdd8a",
+                "b8f048d57ea31b68",
+                "c7067e4d018fb08d"
+            ]
+        ]
+    },
+    {
+        "id": "bb1fb155903fdd8a",
+        "type": "function",
+        "z": "66abe7c97d586c12",
+        "name": "function 1",
+        "func": "// Retrieve or initialize global context for temperature data\nlet contextData = global.get('temperatureData') || { count: 0, sum: 0 };\n\n// Determine the temperature from the incoming payload\nlet temperature;\n\nif (typeof msg.payload === \"number\") {\n    // If the payload is a plain number, use it directly\n    temperature = msg.payload;\n} else if (typeof msg.payload === \"object\" && msg.payload.temperature !== undefined) {\n    // If the payload is a JSON object with a \"temperature\" field, extract it\n    temperature = parseFloat(msg.payload.temperature);\n} else {\n    // If the payload is invalid, log an error and stop processing\n    node.error(\"Invalid payload format: \" + JSON.stringify(msg.payload));\n    return null;\n}\n\n// Ensure the temperature is a valid number\nif (isNaN(temperature)) {\n    node.error(\"Invalid temperature value: \" + msg.payload);\n    return null;\n}\n\n// Accumulate the temperature\ncontextData.sum += temperature;\ncontextData.count += 1;\n\n// Check if 10 messages have been received\nif (contextData.count === 10) {\n    let average = contextData.sum / contextData.count; // Calculate the average\n\n    // Limit the average to 2 decimal places\n    average = Number(average.toFixed(2));\n\n    // Reset the context for the next batch\n    contextData.count = 0;\n    contextData.sum = 0;\n\n    // Save the reset context\n    global.set('temperatureData', contextData);\n\n    // Send the average as output\n    msg.payload = { average_temperature: average };\n    return msg; // Send the message downstream\n}\n\n// Save the updated context for future messages\nglobal.set('temperatureData', contextData);\nreturn null; // Do nothing until 10 messages are received\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 240,
+        "wires": [
+            [
+                "627946fca21dc397",
+                "92ace010260cfad0",
+                "c121689e8621960b"
+            ]
+        ]
+    },
+    {
+        "id": "627946fca21dc397",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "92ace010260cfad0",
+        "type": "http request",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://20.77.25.140:8080/api/v1/766tgo8spt7tush184ox/telemetry",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 850,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c121689e8621960b",
+        "type": "amqp-out",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "broker": "f36cc3e9e5df60ac",
+        "exchangeName": "sensor/temperature",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "sensor/temperature",
+        "exchangeRoutingKeyType": "str",
+        "exchangeDurable": true,
+        "amqpProperties": "{ \"headers\": {} }",
+        "rpcTimeoutMilliseconds": 3000,
+        "outputs": 0,
+        "x": 940,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b8f048d57ea31b68",
+        "type": "ui_gauge",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "group": "18515a14d4b2bef2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e978e7b4ec514f2b",
+        "type": "e-mail",
+        "z": "66abe7c97d586c12",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "moutskas@hotmail.com",
+        "dname": "Node Red",
+        "x": 820,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c7067e4d018fb08d",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "86bc9e525d8d1a97",
+        "type": "ui_slider",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "label": "Set Temperature Setpoint",
+        "tooltip": "",
+        "group": "746c7aab3db51e1b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "temperatureSetpoint",
+        "topicType": "flow",
+        "min": 0,
+        "max": "50",
+        "step": 1,
+        "className": "",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "c501fd092f6d9e1b",
+                "a6e147cee6edbaad"
+            ]
+        ]
+    },
+    {
+        "id": "d896b7349b881883",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c501fd092f6d9e1b",
+        "type": "debug",
+        "z": "66abe7c97d586c12",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "ccdf937f5b09cce5",
+        "type": "ui_slider",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "label": "Set Humidity Setpoint",
+        "tooltip": "",
+        "group": "746c7aab3db51e1b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "humiditySetpoint",
+        "topicType": "flow",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "0c9c2edc2cc41ac5"
+            ]
+        ]
+    },
+    {
+        "id": "a6e147cee6edbaad",
+        "type": "change",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temperatureSetpoint",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 140,
+        "wires": [
+            [
+                "490bf81787c9ad28"
+            ]
+        ]
+    },
+    {
+        "id": "0c9c2edc2cc41ac5",
+        "type": "change",
+        "z": "66abe7c97d586c12",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "humiditySetpoint",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 300,
+        "wires": [
+            [
+                "b3d69bd0f42bd527"
+            ]
+        ]
+    }
+]

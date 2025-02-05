@@ -1,12 +1,20 @@
+version: '3.9'
 services:
   portainer:
     image: portainer/portainer-ce:latest
     container_name: portainer
     restart: always
     ports:
-      - "9000:9000"
+      - "9000:9000"  # Portainer web UI
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock  # Required for Docker API access
+      - portainer_data:/data  # Persistent storage for Portainer data
+    networks:
+      - cloudapp_network
+
 volumes:
   portainer_data:
+
+networks:
+  cloudapp_network:
+    external: true

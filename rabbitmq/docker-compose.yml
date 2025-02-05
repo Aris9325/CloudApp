@@ -3,11 +3,20 @@ services:
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
+    hostname: 'mabbit'  # Static hostname for consistent node naming
     restart: always
     ports:
-      - "5672:5672"  # RabbitMQ protocol
+      - "5672:5672"   # RabbitMQ protocol
       - "15672:15672" # Management console
     environment:
-      RABBITMQ_DEFAULT_USER: admin
-      RABBITMQ_DEFAULT_PASS: password
+      RABBITMQ_DEFAULT_USER: admin           # Default username
+      RABBITMQ_DEFAULT_PASS: password        # Default password
+      RABBITMQ_NODENAME: rabbit@mabbit       # Node name with static hostname
+    volumes:
+      - ./data:/var/lib/rabbitmq/mnesia      # Persistent storage for Mnesia database
+    networks:
+      - rabbitmq_network
 
+networks:
+  rabbitmq_network:
+    driver: bridge

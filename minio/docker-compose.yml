@@ -13,5 +13,12 @@ services:
     command: server --address 0.0.0.0:9000 --console-address 0.0.0.0:9001 /data
     volumes:
       - minio-data:/data
+    networks:
+      - cloudapp_network
+
 volumes:
   minio-data:
+
+networks:
+  cloudapp_network:
+    external: true

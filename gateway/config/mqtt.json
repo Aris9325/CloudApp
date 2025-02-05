@@ -1,0 +1,53 @@
+{
+  "broker": {
+    "host": "20.77.25.140",
+    "port": 1884,
+    "version": 4,
+    "clientId": "ThingsBoard_gateway",
+    "security": {
+      "type": "anonymous"
+    }
+  },
+  "mapping": [
+    {
+      "converter": {
+        "type": "json",
+        "attributes": [],
+        "timeseries": [],
+        "deviceNameJsonExpression": "device",
+        "deviceTypeTopicExpression": "default"
+      },
+      "topicFilter": "command/output1"
+    },
+    {
+      "converter": {
+        "type": "json",
+        "attributes": [],
+        "timeseries": [],
+        "deviceNameJsonExpression": "device",
+        "deviceTypeTopicExpression": "default"
+      },
+      "topicFilter": "command/output2"
+    },
+    {
+      "converter": {
+        "type": "json",
+        "attributes": [],
+        "timeseries": [],
+        "deviceNameJsonExpression": "device",
+        "deviceTypeTopicExpression": "default"
+      },
+      "topicFilter": "command/output3"
+    },
+    {
+      "converter": {
+        "type": "json",
+        "attributes": [],
+        "timeseries": [],
+        "deviceNameJsonExpression": "device",
+        "deviceTypeTopicExpression": "default"
+      },
+      "topicFilter": "command/output4"
+    }
+  ]
+}

@@ -1,15 +1,33 @@
-version: '3.5'
+#version: '3.9'
 services:
   mytb:
     restart: always
     image: "thingsboard/tb-postgres"
     ports:
-      - "8080:9090"
-      - "1883:1883"
-      - "7070:7070"
-      - "5683-5688:5683-5688/udp"
+      - "8080:9090"             # HTTP Dashboard
+      - "1883:1883"             # MQTT
+      - "7070:7070"             # HTTP Transport API
+      - "5683-5688:5683-5688/udp" # CoAP protocol
     environment:
-      TB_QUEUE_TYPE: in-memory
+      TB_QUEUE_TYPE: in-memory  # Use in-memory queue for testing
     volumes:
-      - ./data:/data
-      - ./logs:/var/log/thingsboard
+      - ./data:/data            # Persistent storage for Thingsboard data
+      - ./logs:/var/log/thingsboard # Persistent storage for logs
+    networks:
+      - cloudapp_network
+
+  tb-gateway:
+    restart: always
+    image: "thingsboard/tb-gateway"
+    ports:
+      - "9091:9090"             # ThingsBoard Gateway Management
+    volumes:
+      - ./gateway/config:/thingsboard_gateway/config
+      - ./gateway/logs:/thingsboard_gateway/logs
+    networks:
+      - cloudapp_network
+    depends_on:
+      - mytb
+networks:
+  cloudapp_network:
+    external: true

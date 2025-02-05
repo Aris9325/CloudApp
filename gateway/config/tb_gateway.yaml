@@ -1,0 +1,10 @@
+thingsboard:
+  host: "20.77.25.140"
+  port: 1883
+  security:
+    accessToken: "49c0PHb3jVWcz4nbKpoG"
+
+connectors:
+  - name: MQTT Broker Connector
+    type: mqtt
+    configuration: mqtt.json
